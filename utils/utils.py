@@ -154,7 +154,7 @@ def draw_irises(colored_parsing_map, eyes_mask, eyes_lms):
     + eyes_mask * parsing_map_with_iris
     return parsing_map_with_iris
 
-def auto_resize(im, max_size=768):
+def auto_resize(im, max_size=1536):
     if np.max(im.shape) > max_size:
         ratio = max_size / np.max(im.shape)
         im = cv2.resize(im, (0,0), fx=ratio, fy=ratio)
